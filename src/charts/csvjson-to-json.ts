@@ -38,4 +38,4 @@ for (let entry of csv)
     lastSong.charts.push(charts)
 }
 
-fs.writeFileSync("final.json", JSON.stringify(finalJson))
+fs.writeFileSync("charts.json", JSON.stringify(finalJson))
