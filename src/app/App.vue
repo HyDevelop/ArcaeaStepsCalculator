@@ -28,6 +28,11 @@
         text-align: center;
         font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 
+        .label
+        {
+            margin: 5px;
+        }
+
         .settings
         {
             text-align: left;
