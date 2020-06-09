@@ -30,6 +30,8 @@
                     </div>
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
+                    <div class="label">Individual Chart Confidence:</div>
+                    <el-input type="textarea" :rows="18" v-model="settings.songConfidence"/>
                 </el-main>
             </el-container>
         </div>
