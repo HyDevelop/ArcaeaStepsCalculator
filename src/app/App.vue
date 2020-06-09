@@ -195,16 +195,10 @@
 
         getScoreModifier(score: number)
         {
-            // TODO: Use real linear algorithm instead of steps
             // https://arcaea.fandom.com/wiki/Potential#Play_Rating
             if (score >= 1000) return 2
-            if (score >= 990) return 1.5
-            if (score >= 980) return 1
-            if (score >= 950) return 0
-            if (score >= 920) return -1
-            if (score >= 890) return -2
-            if (score >= 860) return -3
-            return -4
+            if (score >= 980) return score/20 - 48
+            return score/3 - 95/3
         }
 
         getDisplayedPossibilities()
