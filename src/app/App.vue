@@ -8,7 +8,8 @@
             <div class="label">How many steps do you want to go? (Decimal allowed)</div>
             <el-input v-model="target"/>
 
-
+            <div class="label">Results:</div>
+            <div v-for="(poss, i) in getDisplayedPossibilities()" :key="poss+i">{{poss}}</div>
         </div>
 
 
