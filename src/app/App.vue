@@ -6,7 +6,10 @@
 
         <div class="settings">
             <div class="label">Characters' Step Values:</div>
-            <el-input placeholder="Step Values" v-model="settings.characterSteps"/>
+            <el-input v-model="settings.characterSteps"/>
+
+            <div class="label">Bought Individual Songs:</div>
+            <el-input type="textarea" autosize v-model="settings.boughtSongs"/>
         </div>
     </div>
 </template>
