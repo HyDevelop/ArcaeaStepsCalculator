@@ -1,6 +1,7 @@
 
 export default class Settings
 {
+    displayLimit = 20
     characterSteps = '102,90,76,55'
     boughtPacks: {[index: string]: boolean} = {
         'Arcaea': true,
