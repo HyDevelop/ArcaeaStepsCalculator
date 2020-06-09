@@ -35,7 +35,8 @@
 
         .label
         {
-            margin: 5px;
+            margin-top: 20px;
+            margin-bottom: 5px;
         }
 
         .settings
