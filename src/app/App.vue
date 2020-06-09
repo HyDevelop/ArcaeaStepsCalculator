@@ -9,7 +9,7 @@
             <el-input v-model="target"/>
 
             <div class="label">Results:</div>
-            <el-table :data="getDisplayedPossibilities()" style="width: 100%">
+            <el-table :data="getDisplayedPossibilities()" style="width: 100%" stripe border>
                 <el-table-column prop="title" label="Title"/>
 
                 <el-table-column prop="length" label="Length"/>
