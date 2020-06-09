@@ -79,6 +79,7 @@
     import Settings from "@/app/settings";
     import Possibility from "@/app/possibility";
     import Song from "@/app/charts";
+    import {i18n} from "@/main";
 
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const songs = require('../charts/charts.json') as Song[]
@@ -102,6 +103,14 @@
                 this.indexConfidence()
                 this.calculate()
             }
+        }
+
+        checkLang()
+        {
+            // Check i18n
+            const url = window.location.href.toLowerCase()
+            if (url.includes('zh') || url.includes('cn') || url.includes('ch')) i18n.locale = 'zh'
+            else i18n.locale = 'en'
         }
 
         saveSettings()
