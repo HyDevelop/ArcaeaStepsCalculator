@@ -52,6 +52,10 @@
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
     import Settings from "@/app/settings";
+    import Song from "@/app/charts";
+
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const songs = require('../charts/charts.json') as Song[]
 
     @Component
     export default class App extends Vue
