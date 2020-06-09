@@ -9,7 +9,17 @@
             <el-input v-model="target"/>
 
             <div class="label">Results:</div>
-            <div v-for="(poss, i) in getDisplayedPossibilities()" :key="poss+i">{{poss}}</div>
+            <el-table :data="getDisplayedPossibilities()" style="width: 100%">
+                <el-table-column prop="title" label="Title"/>
+
+                <el-table-column prop="length" label="Length"/>
+
+                <el-table-column prop="diff" label="Diff"/>
+
+                <el-table-column prop="char" label="Character"/>
+
+                <el-table-column prop="steps" label="Steps"/>
+            </el-table>
         </div>
 
 
@@ -167,7 +177,9 @@
                 .sort((a,b) => (Math.abs(a.steps - this.target) - Math.abs(b.steps - this.target)))
 
             // Pick the first 20
-            return sorted.slice(0, Math.min(20, this.possibilities.length))
+            return sorted.slice(0, Math.min(20, this.possibilities.length)).map(it => {return {
+                title: it.song.title, length: it.song.length, diff: it.chart.difficulty, char: it.char, steps: it.steps
+            }})
         }
     }
 </script>
