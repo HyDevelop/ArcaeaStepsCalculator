@@ -38,5 +38,5 @@ export default class Settings
         '10+': 0, // I don't want to use 10+ charts to climb steps
         '11': 0
     }
-    songConfidence = 'Monochrome Princess: 0\nLunarOrbit: 968\nKanagawa: 999'
+    songConfidence = 'Monochrome Princess - 9 : 0\nLunarOrbit - 9: 968\nKanagawa - 9: 999\nBabaroque - 8: 0'
 }
