@@ -73,4 +73,9 @@
         display: block !important;
         margin-bottom: 3px;
     }
+
+    .el-input-group
+    {
+        margin-bottom: 3px;
+    }
 </style>
