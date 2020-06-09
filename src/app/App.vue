@@ -110,11 +110,13 @@
             // Every song
             for (const song of songs)
             {
+                if (this.settings.boughtPacks[song.pack])
+
                 // Every difficulty
                 for (const chart of song.charts)
                 {
                     // Get confidence score
-                    let score = (this.settings.levelConfidence as never)[chart.difficulty] as number
+                    let score = this.settings.levelConfidence[chart.difficulty]
                     for (const confidence of this.settings.songConfidence.split('\n'))
                     {
                         const split = confidence.replace(/ /g, '').split('-')

@@ -2,7 +2,7 @@
 export default class Settings
 {
     characterSteps = '102,90,76,55'
-    boughtPacks = {
+    boughtPacks: {[index: string]: boolean} = {
         'Arcaea': true,
         'World Extend': false,
         'Black Fate': false,
@@ -23,7 +23,7 @@ export default class Settings
         'Memory Archive': false
     }
     boughtSongs = 'Astral tale\nAvant Raze'
-    levelConfidence = {
+    levelConfidence: {[index: string]: number} = {
         '1': 1000,
         '2': 1000,
         '3': 1000,
