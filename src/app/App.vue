@@ -24,6 +24,9 @@
 
                 <el-table-column sortable prop="steps" label="Steps"
                                  width="100" align="center"/>
+
+                <el-table-column sortable prop="shift" label="Shift"
+                                 width="100" align="center"/>
             </el-table>
         </div>
 
