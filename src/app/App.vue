@@ -91,4 +91,14 @@
     {
         margin-bottom: 3px;
     }
+
+    .el-divider
+    {
+        background-color: #ff277d !important;
+    }
+
+    .el-divider__text
+    {
+        color: #ff277d !important;
+    }
 </style>
