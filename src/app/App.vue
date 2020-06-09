@@ -79,6 +79,37 @@
             console.log('Settings saved')
             this.$cookies.set('settings', JSON.stringify(this.settings), '1y')
         }
+
+        /**
+         * Cache confidence scores
+         */
+        indexConfidence()
+        {
+            // Every song
+            for (const song of songs)
+            {
+                // Every difficulty
+                for (const chart of song.charts)
+                {
+                    // Get confidence score
+                    let score = (this.settings.levelConfidence as never)[chart.difficulty] as number
+                    for (const confidence of this.settings.songConfidence.split('\n'))
+                    {
+                        const split = confidence.replace(/ /g, '').split('-')
+                        const title = split[0]
+                        const split1 = split[0].split(':')
+                        const diff = split1[0]
+
+                        if (song.title.replace(/ /g, '').includes(title) && chart.difficulty == diff)
+                        {
+                            score = +split1[1]
+                        }
+                    }
+
+                    chart.score = score
+                }
+            }
+        }
     }
 </script>
 
