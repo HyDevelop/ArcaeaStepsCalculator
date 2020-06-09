@@ -52,6 +52,7 @@
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
     import Settings from "@/app/settings";
+    import Possibility from "@/app/possibility";
     import Song from "@/app/charts";
 
     // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -64,6 +65,8 @@
         levels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '9+', '10', '10+', '11']
 
         target = 15
+
+        possibilities: Possibility[] = []
 
         created()
         {
@@ -109,6 +112,29 @@
                     }
 
                     chart.score = score
+                }
+            }
+        }
+
+        calculate()
+        {
+            this.possibilities = []
+
+            // Every song
+            for (const song of songs)
+            {
+                // Every difficulty
+                for (const chart of song.charts)
+                {
+                    // Every character
+                    for (const char of this.settings.characterSteps.split(',').map(it => +it))
+                    {
+                        // Calculate steps
+                        // https://arcaea.fandom.com/wiki/World_Mode_Mechanics#Calculation
+                        const steps = (2.45 * Math.sqrt(chart.score) + 2.5) * (char / 50)
+
+                        this.possibilities.push({song: song, chart: chart, char: char, steps: steps})
+                    }
                 }
             }
         }
