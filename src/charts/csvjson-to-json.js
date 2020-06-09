@@ -1,13 +1,16 @@
-const csv = require('./csvjson.json')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs');
 
-let finalJson: any = []
-let lastSong: any = {}
+const csvJson = fs.readFileSync('./csvjson.json').toString().replace(/""/g, '-1').replace(/[*?]/g, '')
+const csv = JSON.parse(csvJson)
 
-for (let entry of csv)
+const finalJson = []
+let lastSong = {}
+
+for (const entry of csv)
 {
     // Reading a new song
-    if (entry["Title"] != '')
+    if (entry["Title"] !== -1)
     {
         lastSong = {}
         lastSong.title = entry["Title"]
@@ -25,8 +28,8 @@ for (let entry of csv)
     }
 
     // Add specific info about this song.
-    let charts: any = {}
-    charts.difficulty = entry["Difficulty"]
+    const charts = {}
+    charts.difficulty = "" + entry["Difficulty"]
     charts.notes = entry["Notes"]
     charts.floorNotes = entry["Floor Notes"]
     charts.holdNotes = entry["Hold Notes"]
