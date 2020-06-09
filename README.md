@@ -8,9 +8,7 @@
 * Go to https://csvjson.com/csv2json
 * Paste `.csv` content, convert to json
 * Download json
-* Open json with Notepad++
-* Replace `*` with empty string
 * Copy json to `src/charts/csvjson.json`
 * Open terminal in `src/charts/`
-* Run `ts-node csvjson-to-json.ts`
+* Run `node csvjson-to-json.js`
 * Done!
