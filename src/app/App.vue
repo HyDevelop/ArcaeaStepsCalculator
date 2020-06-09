@@ -2,6 +2,15 @@
     <div id="app">
         <h1>Arcaea Steps Calculator</h1>
 
+        <el-divider><i class="el-icon-star-on"/> Calculation <i class="el-icon-star-on"/></el-divider>
+
+        <div class="calculation">
+            <div class="label">How many steps are you looking for? </div>
+            <el-input v-model="target"/>
+
+        </div>
+
+
         <el-divider><i class="el-icon-star-on"/> Settings <i class="el-icon-star-on"/></el-divider>
 
         <div class="settings">
@@ -45,8 +54,10 @@
     @Component
     export default class App extends Vue
     {
-        settings: Settings = new Settings();
+        settings = new Settings();
         levels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '9+', '10', '10+', '11']
+
+        target = 15
     }
 </script>
 
