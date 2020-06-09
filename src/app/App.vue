@@ -105,9 +105,9 @@
             if (this.$cookies.isKey('settings'))
             {
                 this.settings = this.$cookies.get('settings')
-                this.indexConfidence()
-                this.calculate()
             }
+            this.indexConfidence()
+            this.calculate()
         }
 
         checkLang()
