@@ -34,6 +34,9 @@
             <div class="label">Display Limit:</div>
             <el-input v-model="settings.displayLimit" @change="saveSettings"/>
 
+            <div class="label">Shift Range:</div>
+            <el-input v-model="settings.shiftRange" @change="saveSettings"/>
+
             <div class="label">Characters' Step Values:</div>
             <el-input v-model="settings.characterSteps" @change="saveSettings"/>
 
