@@ -9,7 +9,7 @@
             <el-input v-model="target"/>
 
             <div class="label">Results:</div>
-            <el-table :data="getDisplayedPossibilities()" style="width: 100%" stripe border
+            <el-table :data="getDisplayedPossibilities()" style="width: 100%" stripe border height="60vh"
                       :default-sort="{prop: 'length', order: 'asecending'}">
                 <el-table-column sortable prop="title" label="Title"/>
 
