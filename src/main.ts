@@ -7,6 +7,9 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies)
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
