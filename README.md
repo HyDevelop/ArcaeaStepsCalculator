@@ -1,6 +1,14 @@
 # Arcaea Steps Calculator
 
-### How to update charts data:
+## How to use
+
+1. Open Site ( [English](https://arcaea.hydev.org/#en) | [中文](https://arcaea.hydev.org/#zh) )
+2. Scroll down to chagne settings (settings are automatically saved to cookies)
+3. Change the target steps number to recalculate.
+
+## How to update charts data:
+
+(This is recorded in case future contributors forgets how to update chart data)
 
 * Create a Google sheet document
 * Type `=importHTML("https://arcaea.fandom.com/wiki/Songs_data","table",1)` on A1
