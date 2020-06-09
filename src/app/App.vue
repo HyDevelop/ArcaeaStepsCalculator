@@ -186,13 +186,13 @@
         getDisplayedPossibilities()
         {
             // Sort
-            const sorted = this.possibilities.slice()
-                .sort((a,b) => (Math.abs(a.steps - this.target) - Math.abs(b.steps - this.target)))
+            const sorted = this.possibilities.slice().map(it => {return {
+                title: it.song.title, length: it.song.length, diff: it.chart.difficulty, char: it.char,
+                steps: it.steps, shift: +Math.abs(it.steps - this.target).toFixed(1)
+            }}).filter(it => it.shift <= this.settings.shiftRange).sort((a,b) => a.shift - b.shift)
 
             // Pick the first 20
-            return sorted.slice(0, Math.min(20, this.possibilities.length)).map(it => {return {
-                title: it.song.title, length: it.song.length, diff: it.chart.difficulty, char: it.char, steps: it.steps
-            }})
+            return sorted.slice(0, Math.min(this.settings.displayLimit, this.possibilities.length))
         }
     }
 </script>
