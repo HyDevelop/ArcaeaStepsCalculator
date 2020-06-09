@@ -49,4 +49,9 @@
             color: dimgray;
         }
     }
+
+    .el-checkbox
+    {
+        display: block !important;
+    }
 </style>
