@@ -4,7 +4,7 @@ export const t = {
 }
 
 t.en.title = 'Arcaea Steps Calculator'
-t.zh.title = 'Arcaea 爬梯子计算器'
+t.zh.title = 'Arcaea 爬梯计算器'
 
 // Dividers
 
