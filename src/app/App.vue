@@ -2,6 +2,8 @@
     <div id="app">
         <h1>Arcaea Steps Calculator</h1>
 
+        <el-divider><i class="el-icon-star-on"/> Settings <i class="el-icon-star-on"/></el-divider>
+
         <div class="settings">
             <div class="label">Characters' Step Values:</div>
             <el-input placeholder="Step Values" v-model="settings.characterSteps"/>
