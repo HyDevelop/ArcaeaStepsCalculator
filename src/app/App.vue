@@ -10,18 +10,18 @@
 
             <div class="label">Results:</div>
             <el-table :data="getDisplayedPossibilities()" style="width: 100%" stripe border>
-                <el-table-column prop="title" label="Title"/>
+                <el-table-column sortable prop="title" label="Title"/>
 
-                <el-table-column prop="length" label="Length"
+                <el-table-column sortable prop="length" label="Length"
                                  width="100" align="center"/>
 
-                <el-table-column prop="diff" label="Diff"
+                <el-table-column sortable prop="diff" label="Diff"
                                  width="100" align="center"/>
 
-                <el-table-column prop="char" label="Character"
-                                 width="100" align="center"/>
+                <el-table-column sortable prop="char" label="Character"
+                                 width="150" align="center"/>
 
-                <el-table-column prop="steps" label="Steps"
+                <el-table-column sortable prop="steps" label="Steps"
                                  width="100" align="center"/>
             </el-table>
         </div>
