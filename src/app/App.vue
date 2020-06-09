@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <h1>Arcaea Steps Calculator</h1>
 
     </div>
 </template>
