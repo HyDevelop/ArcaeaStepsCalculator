@@ -166,7 +166,7 @@
                         // https://arcaea.fandom.com/wiki/World_Mode_Mechanics#Calculation
                         const steps = (2.45 * Math.sqrt(playRating) + 2.5) * (char / 50)
 
-                        this.possibilities.push({song: song, chart: chart, char: char, steps: +steps.toFixed(1)})
+                        this.possibilities.push({song, chart, char, steps: +steps.toFixed(1)})
                     }
                 }
             }
