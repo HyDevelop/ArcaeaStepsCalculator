@@ -166,7 +166,7 @@
             this.possibilities.sort((a,b) => (Math.abs(a.steps - this.target) - Math.abs(b.steps - this.target)))
 
             return this.possibilities.slice(0, Math.min(40, this.possibilities.length)).map(a =>
-                `${a.song.title} (${a.song.length}) : ${a.chart.difficulty} + ${a.char} - ${a.steps} Steps`)
+                `${a.song.title} (${a.song.length}) : ${a.chart.difficulty} + ${a.char} - ${a.steps.toFixed(1)} Steps`)
         }
     }
 </script>
