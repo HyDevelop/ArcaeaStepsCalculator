@@ -1,8 +1,9 @@
+import Song, {Chart} from "@/app/charts";
 
 export default interface Possibility
 {
-    song: any
-    chart: any
+    song: Song
+    chart: Chart
     char: number
     steps: number
 }
