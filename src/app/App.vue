@@ -23,7 +23,7 @@
             <el-container>
                 <el-aside width="160px">
                     <div class="label">Level Confidence:</div>
-                    <div v-for="level in Object.keys(this.settings.levelConfidence)" :key="level">
+                    <div v-for="level in levels" :key="level">
                         <el-input size="mini" v-model="settings.levelConfidence[level]">
                             <template slot="prepend">{{level}}</template>
                         </el-input>
@@ -46,6 +46,11 @@
     export default class App extends Vue
     {
         settings: Settings = new Settings();
+
+        get levels()
+        {
+            return Object.keys(this.settings.levelConfidence).sort((a, b) => +a.replace('+', '.5') - +b.replace('+', '.5'))
+        }
     }
 </script>
 
