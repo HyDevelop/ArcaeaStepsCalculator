@@ -8,7 +8,7 @@
             <div class="label">How many steps do you want to go? (Decimal allowed)</div>
             <el-input v-model="target"/>
 
-            
+
         </div>
 
 
@@ -16,17 +16,18 @@
 
         <div class="settings">
             <div class="label">Characters' Step Values:</div>
-            <el-input v-model="settings.characterSteps"/>
+            <el-input v-model="settings.characterSteps" @input="saveSettings"/>
 
             <el-container>
                 <el-aside width="160px">
                     <div class="label">Bought Song Packs:</div>
                     <el-checkbox v-for="pack in Object.keys(settings.boughtPacks)" :key="pack"
-                                 v-model="settings.boughtPacks[pack]">{{pack}}</el-checkbox>
+                                 v-model="settings.boughtPacks[pack]" @change="saveSettings">{{pack}}
+                    </el-checkbox>
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
                     <div class="label">Bought Individual Songs:</div>
-                    <el-input type="textarea" :rows="18" v-model="settings.boughtSongs"/>
+                    <el-input type="textarea" :rows="18" v-model="settings.boughtSongs" @input="saveSettings"/>
                 </el-main>
             </el-container>
 
@@ -34,14 +35,14 @@
                 <el-aside width="160px">
                     <div class="label">Level Confidence:</div>
                     <div v-for="level in levels" :key="level">
-                        <el-input size="mini" v-model="settings.levelConfidence[level]">
+                        <el-input size="mini" v-model="settings.levelConfidence[level]" @input="saveSettings">
                             <template slot="prepend">{{level}}</template>
                         </el-input>
                     </div>
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
                     <div class="label">Individual Chart Confidence:</div>
-                    <el-input type="textarea" :rows="18" v-model="settings.songConfidence"/>
+                    <el-input type="textarea" :rows="18" v-model="settings.songConfidence" @input="saveSettings"/>
                 </el-main>
             </el-container>
         </div>
@@ -59,6 +60,12 @@
         levels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '9+', '10', '10+', '11']
 
         target = 15
+
+        saveSettings()
+        {
+            console.log('Settings saved')
+            this.$cookies.set('settings', JSON.stringify(this.settings), '1y')
+        }
     }
 </script>
 
