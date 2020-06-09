@@ -44,23 +44,23 @@ t.zh.tableShift = '偏移'
 
 // Settings labels
 
-t.en.lblDisplayLimit = 'Display Limit:'
+t.en.lblDisplayLimit = 'Display Limit - How many entries do you want to display?'
 t.zh.lblDisplayLimit = '显示多少个呢?'
 
-t.en.lblShiftRange = 'Shift Range:'
+t.en.lblShiftRange = 'Shift Range - Maximum allowed shift from the target steps:'
 t.zh.lblShiftRange = '步数偏移的最大值:'
 
-t.en.lblCharSteps = 'Characters\' Step Values:'
-t.zh.lblCharSteps = '你想用的搭档的 STEP 数值:'
+t.en.lblCharSteps = 'The step values of the partners you want to use (separated by comma):'
+t.zh.lblCharSteps = '你想用的搭档的 STEP 数值 (逗号分隔):'
 
-t.en.lblBoughtPacks = 'Bought Song Packs:'
+t.en.lblBoughtPacks = 'Allowed Song Packs:'
 t.zh.lblBoughtPacks = '想用的曲包:'
 
-t.en.lblBoughtSongs = 'Bought Individual Songs:'
+t.en.lblBoughtSongs = 'Allowed Individual Songs:'
 t.zh.lblBoughtSongs = '想用的单曲:'
 
-t.en.lblLevelConfidence = 'Level Confidence:'
+t.en.lblLevelConfidence = 'Level Score Estimate:'
 t.zh.lblLevelConfidence = '难度大概分数:'
 
-t.en.lblChartConfidence = 'Individual Chart Confidence:'
-t.zh.lblChartConfidence = '谱面大概分数:'
+t.en.lblChartConfidence = 'Chart Score Estimate (Format: [Partial Name]-[Level]:[Score])'
+t.zh.lblChartConfidence = '谱面大概分数 (格式: [部分曲名]-[等级]:[分数])'
