@@ -8,6 +8,10 @@
             <div class="label">Characters' Step Values:</div>
             <el-input v-model="settings.characterSteps"/>
 
+            <div class="label">Bought Song Packs:</div>
+            <el-checkbox v-for="pack in Object.keys(settings.boughtPacks)" :key="pack"
+                         v-model="settings.boughtPacks[pack]">{{pack}}</el-checkbox>
+
             <div class="label">Bought Individual Songs:</div>
             <el-input type="textarea" autosize v-model="settings.boughtSongs"/>
         </div>
