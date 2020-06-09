@@ -75,6 +75,7 @@
             {
                 this.settings = this.$cookies.get('settings')
                 this.indexConfidence()
+                this.calculate()
             }
         }
 
@@ -83,6 +84,7 @@
             console.log('Settings saved')
             this.$cookies.set('settings', JSON.stringify(this.settings), '1y')
             this.indexConfidence()
+            this.calculate()
         }
 
         /**
