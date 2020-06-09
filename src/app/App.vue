@@ -31,6 +31,9 @@
         <el-divider><i class="el-icon-star-on"/> Settings <i class="el-icon-star-on"/></el-divider>
 
         <div class="settings">
+            <div class="label">Display Limit:</div>
+            <el-input v-model="settings.displayLimit" @change="saveSettings"/>
+
             <div class="label">Characters' Step Values:</div>
             <el-input v-model="settings.characterSteps" @change="saveSettings"/>
 
