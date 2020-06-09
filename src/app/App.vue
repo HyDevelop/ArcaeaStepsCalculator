@@ -5,9 +5,10 @@
         <el-divider><i class="el-icon-star-on"/> Calculation <i class="el-icon-star-on"/></el-divider>
 
         <div class="calculation">
-            <div class="label">How many steps are you looking for? </div>
+            <div class="label">How many steps do you want to go? (Decimal allowed)</div>
             <el-input v-model="target"/>
 
+            
         </div>
 
 
