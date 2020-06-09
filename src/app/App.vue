@@ -96,6 +96,11 @@
 
         created()
         {
+            // i18n
+            window.addEventListener('locationchange', this.checkLang)
+            window.onhashchange = this.checkLang
+            this.checkLang()
+
             // Load settings from cookies
             if (this.$cookies.isKey('settings'))
             {
