@@ -1,24 +1,16 @@
-# arcaea-steps-calculator
+# Arcaea Steps Calculator
 
-## Project setup
-```
-npm install
-```
+### How to update charts data:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Create a Google sheet document
+* Type `=importHTML("https://arcaea.fandom.com/wiki/Songs_data","table",1)` on A1
+* File > Download > `.csv`
+* Go to https://csvjson.com/csv2json
+* Paste `.csv` content, convert to json
+* Download json
+* Open json with Notepad++
+* Replace `*` with empty string
+* Copy json to `src/charts/csvjson.json`
+* Open terminal in `src/charts/`
+* Run `ts-node csvjson-to-json.ts`
+* Done!
