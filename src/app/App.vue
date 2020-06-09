@@ -16,7 +16,7 @@
 
         <div class="settings">
             <div class="label">Characters' Step Values:</div>
-            <el-input v-model="settings.characterSteps" @input="saveSettings"/>
+            <el-input v-model="settings.characterSteps" @change="saveSettings"/>
 
             <el-container>
                 <el-aside width="160px">
@@ -27,7 +27,7 @@
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
                     <div class="label">Bought Individual Songs:</div>
-                    <el-input type="textarea" :rows="18" v-model="settings.boughtSongs" @input="saveSettings"/>
+                    <el-input type="textarea" :rows="18" v-model="settings.boughtSongs" @change="saveSettings"/>
                 </el-main>
             </el-container>
 
@@ -35,14 +35,14 @@
                 <el-aside width="160px">
                     <div class="label">Level Confidence:</div>
                     <div v-for="level in levels" :key="level">
-                        <el-input size="mini" v-model="settings.levelConfidence[level]" @input="saveSettings">
+                        <el-input size="mini" v-model="settings.levelConfidence[level]" @change="saveSettings">
                             <template slot="prepend">{{level}}</template>
                         </el-input>
                     </div>
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
                     <div class="label">Individual Chart Confidence:</div>
-                    <el-input type="textarea" :rows="18" v-model="settings.songConfidence" @input="saveSettings"/>
+                    <el-input type="textarea" :rows="18" v-model="settings.songConfidence" @change="saveSettings"/>
                 </el-main>
             </el-container>
         </div>
