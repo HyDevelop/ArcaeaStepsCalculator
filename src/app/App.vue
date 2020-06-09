@@ -12,13 +12,17 @@
             <el-table :data="getDisplayedPossibilities()" style="width: 100%" stripe border>
                 <el-table-column prop="title" label="Title"/>
 
-                <el-table-column prop="length" label="Length"/>
+                <el-table-column prop="length" label="Length"
+                                 width="100" align="center"/>
 
-                <el-table-column prop="diff" label="Diff"/>
+                <el-table-column prop="diff" label="Diff"
+                                 width="100" align="center"/>
 
-                <el-table-column prop="char" label="Character"/>
+                <el-table-column prop="char" label="Character"
+                                 width="100" align="center"/>
 
-                <el-table-column prop="steps" label="Steps"/>
+                <el-table-column prop="steps" label="Steps"
+                                 width="100" align="center"/>
             </el-table>
         </div>
 
