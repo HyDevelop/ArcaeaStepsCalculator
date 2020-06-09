@@ -62,23 +62,22 @@
 </script>
 
 <style lang="scss">
+    .label
+    {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        color: dimgray;
+    }
+
     #app
     {
         max-width: 1000px;
         margin: auto;
-        text-align: center;
         font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 
-        .label
+        h1
         {
-            margin-top: 20px;
-            margin-bottom: 5px;
-        }
-
-        .settings
-        {
-            text-align: left;
-            color: dimgray;
+            text-align: center;
         }
     }
 
