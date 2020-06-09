@@ -1,6 +1,13 @@
 <template>
     <div id="app">
         <h1>{{t('title')}}</h1>
+        <div class="subtitle">
+            <a href="https://github.com/HyDevelop/ArcaeaStepsCalculator">Github</a>
+            &lt;
+            <a href="https://github.com/hykilpikonna">By Hykilpikonna</a>
+            &gt;
+            <a href="https://www.youtube.com/channel/UCCwz4RuQr1Glln359nuj2vw">Youtube</a>
+        </div>
 
         <el-divider><i class="el-icon-star-on"/> {{t('divCalculation')}} <i class="el-icon-star-on"/></el-divider>
 
@@ -233,6 +240,19 @@
         h1
         {
             text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle
+        {
+            text-align: center;
+            color: #ff79ad;
+            margin-bottom: 21px;
+
+            a
+            {
+                color: inherit;
+            }
         }
     }
 
