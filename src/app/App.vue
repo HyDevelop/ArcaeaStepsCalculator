@@ -2,6 +2,10 @@
     <div id="app">
         <h1>Arcaea Steps Calculator</h1>
 
+        <div class="settings">
+            <div class="label">Characters' Step Values:</div>
+            <el-input placeholder="Step Values" v-model="settings.characterSteps"/>
+        </div>
     </div>
 </template>
 
