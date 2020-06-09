@@ -19,6 +19,19 @@
                     <el-input type="textarea" :rows="18" v-model="settings.boughtSongs"/>
                 </el-main>
             </el-container>
+
+            <el-container>
+                <el-aside width="160px">
+                    <div class="label">Level Confidence:</div>
+                    <div v-for="level in Object.keys(this.settings.levelConfidence)" :key="level">
+                        <el-input size="mini" v-model="settings.levelConfidence[level]">
+                            <template slot="prepend">{{level}}</template>
+                        </el-input>
+                    </div>
+                </el-aside>
+                <el-main style="padding: 0; margin-left: 5vw">
+                </el-main>
+            </el-container>
         </div>
     </div>
 </template>
