@@ -111,8 +111,6 @@
             // Every song
             for (const song of songs)
             {
-                if (this.settings.boughtPacks[song.pack])
-
                 // Every difficulty
                 for (const chart of song.charts)
                 {
@@ -143,6 +141,8 @@
             // Every song
             for (const song of songs)
             {
+                if (!this.settings.boughtPacks[song.pack]) continue
+
                 // Every difficulty
                 for (const chart of song.charts)
                 {
