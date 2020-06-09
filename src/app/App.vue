@@ -1,64 +1,64 @@
 <template>
     <div id="app">
-        <h1>Arcaea Steps Calculator</h1>
+        <h1>{{t('title')}}</h1>
 
-        <el-divider><i class="el-icon-star-on"/> Calculation <i class="el-icon-star-on"/></el-divider>
+        <el-divider><i class="el-icon-star-on"/> {{t('divCalculation')}} <i class="el-icon-star-on"/></el-divider>
 
         <div class="calculation">
-            <div class="label">How many steps do you want to go? (Decimal allowed)</div>
+            <div class="label">{{t('lblTarget')}}</div>
             <el-input v-model="target"/>
 
-            <div class="label">Results:</div>
+            <div class="label">{{t('lblResults')}}</div>
             <el-table :data="getDisplayedPossibilities()" style="width: 100%" stripe border height="60vh"
-                      :default-sort="{prop: 'length', order: 'asecending'}">
-                <el-table-column sortable prop="title" label="Title"/>
+                      :default-sort="{prop: 'length', order: 'ascending'}">
+                <el-table-column sortable prop="title" :label="t('tableTitle')"/>
 
-                <el-table-column sortable prop="length" label="Time"
+                <el-table-column sortable prop="length" :label="t('tableTime')"
                                  width="100" align="center"/>
 
-                <el-table-column sortable prop="diff" label="Diff"
+                <el-table-column sortable prop="diff" :label="t('tableDiff')"
                                  width="100" align="center"/>
 
-                <el-table-column sortable prop="char" label="Character"
+                <el-table-column sortable prop="char" :label="t('tableChar')"
                                  width="150" align="center"/>
 
-                <el-table-column sortable prop="steps" label="Steps"
+                <el-table-column sortable prop="steps" :label="t('tableSteps')"
                                  width="100" align="center"/>
 
-                <el-table-column sortable prop="shift" label="Shift"
+                <el-table-column sortable prop="shift" :label="t('tableShift')"
                                  width="100" align="center"/>
             </el-table>
         </div>
 
 
-        <el-divider><i class="el-icon-star-on"/> Settings <i class="el-icon-star-on"/></el-divider>
+        <el-divider><i class="el-icon-star-on"/> {{t('divSettings')}} <i class="el-icon-star-on"/></el-divider>
 
         <div class="settings">
-            <div class="label">Display Limit:</div>
+            <div class="label">{{t('lblDisplayLimit')}}</div>
             <el-input v-model="settings.displayLimit" @change="saveSettings"/>
 
-            <div class="label">Shift Range:</div>
+            <div class="label">{{t('lblShiftRange')}}</div>
             <el-input v-model="settings.shiftRange" @change="saveSettings"/>
 
-            <div class="label">Characters' Step Values:</div>
+            <div class="label">{{t('lblCharSteps')}}</div>
             <el-input v-model="settings.characterSteps" @change="saveSettings"/>
 
             <el-container>
                 <el-aside width="160px">
-                    <div class="label">Bought Song Packs:</div>
+                    <div class="label">{{t('lblBoughtPacks')}}</div>
                     <el-checkbox v-for="pack in Object.keys(settings.boughtPacks)" :key="pack"
                                  v-model="settings.boughtPacks[pack]" @change="saveSettings">{{pack}}
                     </el-checkbox>
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
-                    <div class="label">Bought Individual Songs:</div>
+                    <div class="label">{{t('lblBoughtSongs')}}</div>
                     <el-input type="textarea" :rows="18" v-model="settings.boughtSongs" @change="saveSettings"/>
                 </el-main>
             </el-container>
 
             <el-container>
                 <el-aside width="160px">
-                    <div class="label">Level Confidence:</div>
+                    <div class="label">{{t('lblLevelConfidence')}}</div>
                     <div v-for="level in levels" :key="level">
                         <el-input size="mini" v-model="settings.levelConfidence[level]" @change="saveSettings">
                             <template slot="prepend">{{level}}</template>
@@ -66,7 +66,7 @@
                     </div>
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
-                    <div class="label">Individual Chart Confidence:</div>
+                    <div class="label">{{t('lblChartConfidence')}}</div>
                     <el-input type="textarea" :rows="18" v-model="settings.songConfidence" @change="saveSettings"/>
                 </el-main>
             </el-container>
@@ -197,6 +197,8 @@
             // Pick the first 20
             return sorted.slice(0, Math.min(this.settings.displayLimit, this.possibilities.length))
         }
+
+        t(id: string) { return this.$t(id) }
     }
 </script>
 
