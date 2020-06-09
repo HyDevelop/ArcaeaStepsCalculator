@@ -46,11 +46,7 @@
     export default class App extends Vue
     {
         settings: Settings = new Settings();
-
-        get levels()
-        {
-            return Object.keys(this.settings.levelConfidence).sort((a, b) => +a.replace('+', '.5') - +b.replace('+', '.5'))
-        }
+        levels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '9+', '10', '10+', '11']
     }
 </script>
 
