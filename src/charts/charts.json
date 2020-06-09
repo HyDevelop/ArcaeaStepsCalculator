@@ -1959,7 +1959,7 @@
                 "arcNotes": -1,
                 "skyNotes": 31,
                 "notesPerSec": 3.18,
-                "chartConstant": "6.5"
+                "chartConstant": 6.5
             },
             {
                 "difficulty": "3",
@@ -2831,7 +2831,7 @@
                 "arcNotes": 528,
                 "skyNotes": 162,
                 "notesPerSec": 7.34,
-                "chartConstant": "N/A"
+                "chartConstant": -1
             }
         ]
     },
@@ -4617,7 +4617,7 @@
                 "arcNotes": -1,
                 "skyNotes": 135,
                 "notesPerSec": -1,
-                "chartConstant": "N/A"
+                "chartConstant": -1
             }
         ]
     },
@@ -6067,7 +6067,7 @@
                 "arcNotes": -1,
                 "skyNotes": 20,
                 "notesPerSec": 1.24,
-                "chartConstant": "N/A"
+                "chartConstant": -1
             },
             {
                 "difficulty": "1",
@@ -6077,7 +6077,7 @@
                 "arcNotes": -1,
                 "skyNotes": 0,
                 "notesPerSec": 1.36,
-                "chartConstant": "N/A"
+                "chartConstant": -1
             }
         ]
     },

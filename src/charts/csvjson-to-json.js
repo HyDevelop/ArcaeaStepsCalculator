@@ -37,6 +37,7 @@ for (const entry of csv)
     charts.skyNotes = entry["Sky Notes"]
     charts.notesPerSec = entry["Notes per second"]
     charts.chartConstant = entry["Chart Constant"]
+    if (typeof(charts.chartConstant) == 'string') charts.chartConstant = -1
 
     lastSong.charts.push(charts)
 }
