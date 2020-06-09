@@ -31,6 +31,7 @@
         .settings
         {
             text-align: left;
+            color: dimgray;
         }
     }
 </style>
