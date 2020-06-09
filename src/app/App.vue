@@ -131,9 +131,13 @@
                     // Every character
                     for (const char of this.settings.characterSteps.split(',').map(it => +it))
                     {
+                        // Calculate play rating
+                        // https://arcaea.fandom.com/wiki/Potential#Play_Rating
+                        const playRating = Math.max(chart.chartConstant + this.getScoreModifier(chart.score))
+
                         // Calculate steps
                         // https://arcaea.fandom.com/wiki/World_Mode_Mechanics#Calculation
-                        const steps = (2.45 * Math.sqrt(chart.score) + 2.5) * (char / 50)
+                        const steps = (2.45 * Math.sqrt(playRating) + 2.5) * (char / 50)
 
                         this.possibilities.push({song: song, chart: chart, char: char, steps: steps})
                     }
