@@ -71,6 +71,7 @@
             if (this.$cookies.isKey('settings'))
             {
                 this.settings = this.$cookies.get('settings')
+                this.indexConfidence()
             }
         }
 
@@ -78,6 +79,7 @@
         {
             console.log('Settings saved')
             this.$cookies.set('settings', JSON.stringify(this.settings), '1y')
+            this.indexConfidence()
         }
 
         /**
