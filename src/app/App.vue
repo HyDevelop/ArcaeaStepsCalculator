@@ -61,6 +61,15 @@
 
         target = 15
 
+        created()
+        {
+            // Load settings from cookies
+            if (this.$cookies.isKey('settings'))
+            {
+                this.settings = this.$cookies.get('settings')
+            }
+        }
+
         saveSettings()
         {
             console.log('Settings saved')
