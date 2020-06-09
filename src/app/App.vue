@@ -16,7 +16,7 @@
                 </el-aside>
                 <el-main style="padding: 0; margin-left: 5vw">
                     <div class="label">Bought Individual Songs:</div>
-                    <el-input type="textarea" autosize v-model="settings.boughtSongs"/>
+                    <el-input type="textarea" :rows="18" v-model="settings.boughtSongs"/>
                 </el-main>
             </el-container>
         </div>
