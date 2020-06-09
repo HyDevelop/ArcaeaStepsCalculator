@@ -53,5 +53,6 @@
     .el-checkbox
     {
         display: block !important;
+        margin-bottom: 3px;
     }
 </style>
